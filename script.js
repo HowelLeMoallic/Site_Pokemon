@@ -13,27 +13,37 @@ function saisiePokemon(){
 }
 
 //Fonction pour afficher sur la page
-function research(data){  
-  let ul = document.getElementById("listPokemon");
-  let li = document.createElement("li");
+function research(data){
+  
+  let divListCard = document.getElementById("listCard");
+  let divCard = document.createElement("div");
+  divCard.setAttribute("class", "card");
+  divCard.setAttribute("style", "width: 15rem;");
+  let divCardBody = document.createElement("div");
+  divCardBody.setAttribute("class", "card-body");
   //déclaration d'un p
   let p = document.createElement("p");
-  //déclaration d'un h1
-  let h1 = document.createElement("h1");
+  p.setAttribute("class", "card-text");
+  //déclaration d'un h5
+  let h5 = document.createElement("h5");
+  h5.setAttribute("class", "card-title");
   //déclaration d'une image avec sa balise
   let sprite = `<img src="${data.sprite}">`;
+  let pIMg = document.createElement("p");
+  pIMg.setAttribute("onclick", `agrandirImage(${numeroPokemon})`);
+  pIMg.setAttribute("class", "card-img-top");
+  pIMg.innerHTML = sprite;
   //Récupère le nom du pokemon
-  h1.innerText = `${data.slug}`;
-  li.append(h1);
+  h5.innerText = `${data.slug}`;
+  divCardBody.append(h5);
   //Ajoute les li dans le ul
-  ul.append(li);
-  //Récupère le sprite du pokemon
-  p.innerHTML = sprite;
-  //Ajoute un attribut au $$
-  p.setAttribute("onclick", `agrandirImage(${numeroPokemon})`);
-  li.append(p);
+  divCard.append(pIMg);
+  divCard.append(divCardBody);
+  divCardBody.append(p);
   //Ajoute les li dans le ul
-  ul.append(li);
+  divCard.append(divCardBody);
+
+  divListCard.append(divCard);
 
   datas.push(data);
   numeroPokemon++;
