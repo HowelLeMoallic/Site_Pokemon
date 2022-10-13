@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+rel="stylesheet" 
+integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" 
+crossorigin="anonymous">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <header>
+        <img id="pokeball1" src = "pokeballVide.png" width = "5%">
+        <img id="pokeball2" src = "pokeballVide.png" width = "5%">
+        <img id="pokeball3" src = "pokeballVide.png" width = "5%">
+        <img id="pokeball4" src = "pokeballVide.png" width = "5%">
+        <img id="pokeball5" src = "pokeballVide.png" width = "5%">
+        <img id="pokeball6" src = "pokeballVide.png" width = "5%">
+    </header>
+    <label for="pokemon">Le nom du pokemon a cherché : </label>
+    <input type="text" id="pokemon">
+
+    <input type="button" value="Rechercher" onclick="saisiePokemon()">
+    <ul id="listPokemon"></ul>
+    <script src="script.js"></script>
+</body>
+</html>
