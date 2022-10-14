@@ -15,6 +15,7 @@ header img{
 
     padding-left: 30px;
     padding-top: 10px;
+    cursor: pointer;
 }
 /*
     CORPS
@@ -78,4 +79,9 @@ body{
 #imgFooter img{
 
     margin-left: 5px;
+}
+
+.suggestions{
+
+    display: none;
 }
