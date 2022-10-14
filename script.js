@@ -15,38 +15,38 @@ function saisiePokemon() {
 function autoSuggestion(elem) {
 
   let input = elem.value;
-  console.log(input);
 
-  // let list = document.querySelector(".suggestions");
+  let list = document.querySelector(".suggestions");
 
-  // // Si le texte est vide, alors on arrète la la fonction, et on cache la liste
-  // if (!txt) {
-  //   list.style.display = "none";
-  //   return;
-  // }
+  // Si le texte est vide, alors on arrète la la fonction, et on cache la liste
+  if (!input) {
+    list.style.display = "none";
+    return;
+  }
 
-  // // variable qui indiquera le nombre de suggestions correspondantes	
-  // var suggestions = 0;
-  // // On créer une variable qui contiendra toute les suggestions qui seront affichées
-  // var frag = document.createDocumentFragment();
+  // variable qui indiquera le nombre de suggestions correspondantes	
+  let suggestions = 0;
+  // On créer une variable qui contiendra toute les suggestions qui seront affichées
+  frag = document.createDocumentFragment();
+  
+  for (var i = 0, c = datas.length + 1; i < c; i++) {
+    // le code qui va venir après
+    console.log(input);
+  }
 
-  // for (var i = 0, c = motsClefs.length; i < c; i++) {
-  //   // le code qui va venir après
-  // }
-
-  // // Si il y a des suggestions qui peuvent être affichées
-  // if (suggestions) {
-  //   // On vide le contenu de la liste
-  //   list.innerHTML = "";
-  //   // On lui ajoute les différentes suggestions
-  //   list.appendChild(frag);
-  //   // On affiche la liste
-  //   list.style.display = "block";
-  // } // Sinon s'il n'y en a pas
-  // else {
-  //   // On cache la liste
-  //   list.style.display = "none";
-  // }
+  // Si il y a des suggestions qui peuvent être affichées
+  if (suggestions) {
+    // On vide le contenu de la liste
+    list.innerHTML = "";
+    // On lui ajoute les différentes suggestions
+    list.appendChild(frag);
+    // On affiche la liste
+    list.style.display = "block";
+  } // Sinon s'il n'y en a pas
+  else {
+    // On cache la liste
+    list.style.display = "none";
+  }
 
 }
 //Fonction pour afficher sur la page
@@ -163,4 +163,4 @@ function infoPokemon(numeroPokemon) {
 }
 
 
-//window.onload = autoSuggestion();
+window.onload = saisiePokemon();
