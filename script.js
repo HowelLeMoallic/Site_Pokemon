@@ -72,7 +72,7 @@ function agrandirImage(numeroPokemon){
             icon= "pokeballFermeture.gif"
             );
             let pokeball = document.getElementById(`pokeball${nbPokemon}`);
-            pokeball.setAttribute("src", "pokeballPleine.png");
+            pokeball.setAttribute("src", "pokeballPleine.svg");
             pokeball.setAttribute("onclick", `infoPokemon(${numeroPokemon})`);
             nbPokemon++
           }else{
