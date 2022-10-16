@@ -1,23 +1,22 @@
-//import React from 'react';
-//import swal from '@sweetalert/with-react';
+//Déclarations de variables globales
 let datas = [];
 let nbPokemon = 1;
 let numeroPokemon = 0;
 let allPokemon;
+
 //Fonction permettant de récupérer la saisie pour un nom
 //Et d'aller chercher dans l'API via son nom
 async function saisiePokemon() {
-
+  
   fetch(`https://pokebuildapi.fr/api/v1/pokemon/`).then(response => response.json()).then(data =>{ return allPokemon = data});
-  //sessionStorage.setItem('pokemon', data[0].name);
+  
 }
 
-
+//Fonction pour l'auto-suggestion
 function autoSuggestion(elem) {
 
   let input = document.getElementById("pokemon");
   let txt = elem.value;
-  
   let list = document.querySelector(".suggestions");
 
   // Si le texte est vide, alors on arrète la la fonction, et on cache la liste
@@ -76,6 +75,7 @@ function autoSuggestion(elem) {
   }
 
 }
+
 // Quand l'utilisateur dé-sélectionne le champ
 // (Quand il clique ailleurs sur la page)
 document.getElementById("pokemon").onblur = function(){
@@ -197,6 +197,8 @@ function infoPokemon(numeroPokemon) {
   });
 }
 
+//Enumération pour les noms des pokemon en fr
+//Sert pour l'auto-suggestion
 const myEnum = {
   POKEMON1 : 'Bulbizarre', 
   POKEMON2 : 'Herbizarre',
@@ -597,6 +599,110 @@ const myEnum = {
   POKEMON397: 'Étourvol',
   POKEMON398: 'Étouraptors',
   POKEMON399: 'Keunotor',
-  POKEMON400: 'Castorno'
+  POKEMON400: 'Castorno',
+  POKEMON501: 'Crikzik',
+  POKEMON502: 'Mélokrik',
+  POKEMON503: 'Lixy',
+  POKEMON504: 'Luxio',
+  POKEMON505: 'Luxray',
+  POKEMON506: 'Rozbouton',
+  POKEMON507: 'Roserade',
+  POKEMON508: 'Kranidos',
+  POKEMON509: 'Charkos',
+  POKEMON510: 'Dinoclier',
+  POKEMON511: 'Bastiodon',
+  POKEMON512: 'Cheniti',
+  POKEMON513: 'Cheniselle',
+  POKEMON514: 'Papilord',
+  POKEMON515: 'Apitrini',
+  POKEMON516: 'Apireine',
+  POKEMON517: 'Pachirisu',
+  POKEMON518: 'Mustébouée',
+  POKEMON519: 'Mustéflott',
+  POKEMON520: 'Ceribou',
+  POKEMON521: 'Ceriflor',
+  POKEMON522: 'Sancoki',
+  POKEMON523: 'Tritosor',
+  POKEMON524: 'Capidextre',
+  POKEMON525: 'Baudrive',
+  POKEMON526: 'Grodrive',
+  POKEMON527: 'Laporeille',
+  POKEMON528: 'Lockpin',
+  POKEMON529: 'Magirêve',
+  POKEMON530: 'Corboss',
+  POKEMON531: 'Chaglam',
+  POKEMON532: 'Chaffreux',
+  POKEMON533: 'Korillon',
+  POKEMON534: 'Moufouette',
+  POKEMON535: 'Moufflair',
+  POKEMON536: 'Archéomire',
+  POKEMON537: 'Archéodong',
+  POKEMON538: 'Manzaï',
+  POKEMON539: 'Mime Jr.',
+  POKEMON540: 'Ptiravi',
+  POKEMON541: 'Pijako',
+  POKEMON542: 'Spiritomb',
+  POKEMON543: 'Griknot',
+  POKEMON544: 'Carmache',
+  POKEMON545: 'Carchacrok',
+  POKEMON546: 'Goinfrex',
+  POKEMON547: 'Riolu',
+  POKEMON548: 'Lucario',
+  POKEMON549: 'Hippopotas',
+  POKEMON550: 'Hippodocus',
+  POKEMON551: 'Rapion',
+  POKEMON552: 'Drascore',
+  POKEMON553: 'Cradopaud',
+  POKEMON554: 'Coatox',
+  POKEMON555: 'Vortente',
+  POKEMON556: 'Écayon',
+  POKEMON557: 'Luminéon',
+  POKEMON558: 'Babimanta',
+  POKEMON559: 'Blizzi',
+  POKEMON560: 'Blizzaroi',
+  POKEMON561: 'Dimoret',
+  POKEMON562: 'Magnézone',
+  POKEMON563: 'Coudlangue',
+  POKEMON564: 'Rhinastoc',
+  POKEMON565: 'Bouldeneu',
+  POKEMON566: 'Élekable',
+  POKEMON567: 'Maganon',
+  POKEMON568: 'Togekiss',
+  POKEMON569: 'Yanmega',
+  POKEMON570: 'Phyllali',
+  POKEMON571: 'Givrali',
+  POKEMON572: 'Scorvol',
+  POKEMON573: 'Mammochon',
+  POKEMON574: 'Porygon-Z',
+  POKEMON575: 'Gallame',
+  POKEMON576: 'Tarinorme',
+  POKEMON577: 'Noctunoir',
+  POKEMON578: 'Momartik',
+  POKEMON579: 'Motisma',
+  POKEMON580: 'Créhelf',
+  POKEMON581: 'Créfollet',
+  POKEMON582: 'Créfadet',
+  POKEMON583: 'Dialga',
+  POKEMON584: 'Palkia',
+  POKEMON585: 'Heatran',
+  POKEMON586: 'Regigigas',
+  POKEMON587: 'Giratina',
+  POKEMON588: 'Cresselia',
+  POKEMON589: 'Phione',
+  POKEMON590: 'Manaphy',
+  POKEMON591: 'Darkrai',
+  POKEMON592: 'Shaymin',
+  POKEMON593: 'Arceus',
+  POKEMON594: 'Victini',
+  POKEMON595: 'Vipélierre',
+  POKEMON596: 'Lianaja',
+  POKEMON597: 'Majaspic',
+  POKEMON598: 'Gruikui',
+  POKEMON599: 'Grotichon',
+  POKEMON600: 'Roitiflam',
+  POKEMON601: 'Moustillon'
+
 }
+
+//Au chargement de la page, fait appel à la fonction saisisePokemon()
 window.onload = saisiePokemon();
