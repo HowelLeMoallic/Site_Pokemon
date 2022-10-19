@@ -8,15 +8,15 @@ h1{
 
 header{
 
-    text-align: end;
+   display: flex;
+   align-content: center;
+
 }
 
-header img{
-
-    padding-left: 30px;
-    padding-top: 10px;
-    cursor: pointer;
+.pokeballs img{
+    width: 15%;
 }
+
 /*
     CORPS
 */
