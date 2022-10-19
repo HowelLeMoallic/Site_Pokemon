@@ -156,10 +156,10 @@ function agrandirImage(numeroPokemon) {
         case "Attrapé":
           if (nbPokemon < 7) {
             swal("Bravo !", `${datas[numeroPokemon].slug} a été attrapé!`,
-              icon = "pokeballFermeture.gif"
+              icon = "/img/pokeballFermeture.gif"
             );
             let pokeball = document.getElementById(`pokeball${nbPokemon}`);
-            pokeball.setAttribute("src", "pokeballPleine.svg");
+            pokeball.setAttribute("src", "/img/pokeballPleine.svg");
             pokeball.setAttribute("onclick", `infoPokemon(${numeroPokemon})`);
             nbPokemon++
           } else {

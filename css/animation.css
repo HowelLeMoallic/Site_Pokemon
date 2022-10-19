@@ -72,7 +72,7 @@ position: absolute;
 z-index: 8;
 }
 .hero {
-background: url('oie_oie_animation.gif') no-repeat;
+background: url("/img/red_pokemon.gif") no-repeat;
 background-size: contain;
 height: 60px;
 }
