@@ -44,15 +44,15 @@ function autoSuggestion(elem) {
 
       // Lorsque le visiteur clique sur le lien
       word.onmousedown = function () {
-        // On re-sélectionne le champ de texte		
-        input.focus();
-        // On remplace sa valeur par le mot clef
-        input.value = this.mot;
-        // On cache la liste
-        list.style.display = "none";
+      // On re-sélectionne le champ de texte		
+      input.focus();
+      // On remplace sa valeur par le mot clef
+      input.value = this.mot;
+      // On cache la liste
+      list.style.display = "none";
 
-        // On empêche la dé-sélection du champ
-        return false;
+      // On empêche la dé-sélection du champ
+      return false;
       };
       // On indique qu'une suggestion a été ajoutée		
       suggestions++;
@@ -89,6 +89,8 @@ function research() {
 
   //Récupère le champ de saisie de pokemon
   let nomPokemon = document.getElementById("pokemon").value.trim().toLowerCase();
+  //déclaration d'un p
+  let p;
   //Parcours des éléments du tableau 
   for (const element of allPokemon) {
     //Si le nom correspond à l'élément 
@@ -101,8 +103,7 @@ function research() {
       divCard.setAttribute("class", "card");
       divCard.setAttribute("style", "width: 15rem;");
       divCardBody.setAttribute("class", "card-body");
-      //déclaration d'un p
-      let p = document.createElement("p");
+      p =  document.createElement("p");
       p.setAttribute("class", "card-text");
       //déclaration d'un h5
       let h5 = document.createElement("h5");
@@ -133,7 +134,17 @@ function research() {
     }
     
   }
- 
+  //TODO: Message d'erreur en cas d'erreur lors de la saisie du pokemon
+  // if(!p){
+    
+  //   let div = document.getElementById("saisie");
+  //   let p = document.createElement("p");
+  //   p.innerText = " Nom de pokémon saisie incorrect, veuillez saisir un nom valide";
+  //   p.classList.add("error");
+  //   div.append(p);
+
+  // }
+
 }
 
 function agrandirImage(numeroPokemon) {
