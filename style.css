@@ -9,22 +9,32 @@ h1{
 header{
 
    display: flex;
-   align-content: center;
+   flex-direction: column-reverse;
+   align-items: center;
+   max-height: 35vh;
 
 }
-
+.pokeballs{
+    margin-top: 20px;
+    align-self: flex-end;
+}
 .pokeballs img{
-    width: 15%;
+    width: 16%;
 }
 
 /*
     CORPS
 */
-body{
+body {
 
     background-color: #8EC5FC;
     background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    
 
+}
+
+.container-fluid{
+    min-height: 100vh;
 }
 
 #saisie{
@@ -91,6 +101,10 @@ li {
     flex-wrap: wrap;
 }
 
+main{
+    flex: 1;
+    min-height: 52vh;
+}
 /*
     FOOTER
 */
@@ -100,6 +114,7 @@ li {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
+    min-height: 10vh;
 
 }
 
